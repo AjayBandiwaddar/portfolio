@@ -3,96 +3,84 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Ajay Bandiwaddar — AI & RL Portfolio</title>
-  <meta name="description" content="Portfolio of Ajay Bandiwaddar — AI, Reinforcement Learning, Deep Learning, ML engineer." />
-  <link rel="stylesheet" href="styles.css" />
+  <title>Ajay Bandiwaddar — AI Engineer</title>
+  <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
-  <header class="hero">
+  <canvas id="bgcanvas"></canvas>
+  <header class="site-header">
     <div class="container">
-      <h1>Ajay Bandiwaddar</h1>
-      <p class="tag">AI Engineer · Reinforcement Learning · Deep Learning · Robotics</p>
-      <p class="lead">I build intelligent systems & train agents that learn — from simulation to production. Explore live RL demo and selected projects below.</p>
-      <p class="cta-row">
-        <a class="btn" href="#projects">Projects</a>
-        <a class="btn ghost" href="#rl-demo">RL Demo</a>
-      </p>
+      <h1 class="logo">Ajay Bandiwaddar</h1>
+      <p class="tagline">AI Engineer — building production ML systems, LLM products, and trustworthy AI at scale</p>
     </div>
   </header>
 
   <main class="container">
-    <section id="about">
-      <h2>About</h2>
-      <p>I'm Ajay — an engineer focused on machine learning and reinforcement learning. I enjoy turning ML research into robust systems: from model prototyping to deployment and visualization. This portfolio highlights my technical skills and contains an interactive Q-learning sandbox to demonstrate core RL principles.</p>
+    <section class="hero">
+      <div class="hero-text">
+        <h2>Designing reliable intelligence — from prototype to product</h2>
+        <p>Applied ML, model engineering, inference platforms, scalable data pipelines and LLM-driven products. I build systems that turn research-grade models into dependable features customers use every day.</p>
+        <p class="cta"><a href="#work" class="btn">See Selected Work</a> <a href="#playground" class="btn ghost">Open Playground</a></p>
+      </div>
+      <div class="hero-panel">
+        <div class="panel-title">Model Behavior Explorer</div>
+        <div id="model-visual" class="viz"></div>
+        <div class="panel-caption">Interactive visualization of model activations — a stylistic preview you can wire to live traces.</div>
+      </div>
     </section>
 
-    <section id="skills">
-      <h2>Technical Skills</h2>
-      <ul class="skills-grid">
-        <li>Reinforcement Learning (Q-learning, PPO, DQN)</li>
-        <li>Deep Learning (PyTorch, TensorFlow)</li>
-        <li>Probabilistic Methods & Optimization</li>
-        <li>Simulation & Robotics (OpenAI Gym, Mujoco)</li>
-        <li>ML Engineering (Docker, CI/CD, model serving)</li>
-        <li>Data Engineering & Visualization (pandas, d3, plotly)</li>
-      </ul>
-    </section>
+    <section id="work" class="work">
+      <h3>Selected Projects (high-level)</h3>
+      <div class="cards">
+        <article class="card">
+          <h4>LLM Product: Retrieval-Augmented Assistant</h4>
+          <p>Designed and shipped a retrieval + LLM product: embedding store, chunking pipeline, vector search, prompt templates, and safety-layer. Focus: latency-aware inference, cost-aware prompting, and fine-grained evaluation metrics.</p>
+          <p class="meta">Skills: LLMs, embeddings, RAG, prompt engineering, evaluation</p>
+        </article>
 
-    <section id="projects">
-      <h2>Selected Projects</h2>
-      <div class="projects">
-        <article>
-          <h3>Deep RL for Continuous Control</h3>
-          <p>Designed and trained policy-gradient agents for continuous-control tasks. Focus on stable training, reward shaping, and sim-to-real transfer.</p>
+        <article class="card">
+          <h4>Production Inference Platform</h4>
+          <p>Built inference microservices with model versioning, autoscaling, A/B rollouts, and monitoring. Emphasis on efficient serving (FP16, batching), model caching and SLO-driven autoscaling.</p>
+          <p class="meta">Skills: model serving, k8s, gRPC/REST, perf tuning</p>
         </article>
-        <article>
-          <h3>Model Interpretability for Vision Systems</h3>
-          <p>Implemented saliency and attribution tools to explain deep CNN decisions and integrated visual explanations into a lightweight dashboard.</p>
+
+        <article class="card">
+          <h4>Feature Store & Data Contracts</h4>
+          <p>Implemented streaming batch pipelines with schema-driven contracts, monitoring, drift detection and feature lineage so models see the same features in training and production.</p>
+          <p class="meta">Skills: Kafka, Spark, data quality, CI for models</p>
         </article>
-        <article>
-          <h3>RL Curriculum & Curriculum Learning</h3>
-          <p>Built curriculum pipelines to progressively train agents from easier to harder subtasks, improving sample-efficiency for long-horizon tasks.</p>
+
+        <article class="card">
+          <h4>Model Observability & Safety</h4>
+          <p>Worked on anomaly detection for model outputs, uncertainty estimation, and human-in-the-loop labeling flows. Built dashboards that highlight distributional shifts and failure modes.</p>
+          <p class="meta">Skills: monitoring, uncertainty, human-in-the-loop</p>
         </article>
       </div>
-      <p class="project-note">Want the real project descriptions from my resume embedded here? I can update these items with exact titles, links, and metrics from your resume when you share them.</p>
     </section>
 
-    <section id="rl-demo">
-      <h2>Interactive RL Demo — Q-learning Gridworld</h2>
-      <p>This sandbox trains a tiny Q-learning agent on a gridworld. Tweak learning-rate, epsilon, episodes and watch the agent learn to reach the goal. It's all client-side — fast and editable.</p>
-
-      <div class="demo-controls">
-        <label>Episodes: <input id="episodes" type="range" min="1" max="2000" value="500" /></label>
-        <label>Alpha: <input id="alpha" type="range" min="0.01" max="1" step="0.01" value="0.5" /></label>
-        <label>Gamma: <input id="gamma" type="range" min="0" max="1" step="0.01" value="0.9" /></label>
-        <label>Epsilon: <input id="epsilon" type="range" min="0" max="1" step="0.01" value="0.2" /></label>
-        <div class="controls-row">
-          <button id="trainBtn" class="btn">Train</button>
-          <button id="stepBtn" class="btn ghost">Step</button>
-          <button id="resetBtn" class="btn ghost">Reset</button>
+    <section id="playground" class="playground">
+      <h3>Mini Playground — mock inference</h3>
+      <div class="play-area">
+        <textarea id="prompt" placeholder="Write a concise design spec for a RAG pipeline that scales to 10k qps...">Write a concise design spec for a LLM-driven search assistant that balances latency and cost.</textarea>
+        <div class="play-controls">
+          <button id="run">Simulate</button>
+          <small class="hint">This is a local demo. Replace the simulate() call in assets/script.js to wire to a real API.</small>
         </div>
+        <pre id="response" class="response">Responses will appear here — simulated with rich highlighting.</pre>
       </div>
-
-      <canvas id="gridCanvas" width="480" height="480" aria-label="Q-learning gridworld visualization"></canvas>
-      <p class="demo-note">Tip: training many episodes will run faster if you increase the episodes slider and press Train. Q-values are visualized by arrows and cell heat.</p>
     </section>
 
-    <section id="contact">
-      <h2>Contact</h2>
-      <p>Update the contact details in <code>README.md</code> or this site with your email, links to GitHub, LinkedIn, or papers.</p>
-      <ul>
-        <li>GitHub: <a href="https://github.com/AjayBandiwaddar">github.com/AjayBandiwaddar</a></li>
-        <li>Email: <em>replace-with-email@example.com</em></li>
-      </ul>
+    <section class="contact">
+      <h3>Contact & Next Steps</h3>
+      <p>If you'd like this portfolio to link to private repos, case studies, or to embed live demos (e.g., hosted notebooks, model endpoints), tell me which projects to highlight and I will update the pages and add deep-dive case studies.</p>
+      <p class="muted">Resume, publications, or project artifacts can be included on request.</p>
     </section>
   </main>
 
   <footer>
-    <div class="container">
-      <small>Built with a focus on AI & Reinforcement Learning. Clone, edit, and extend the RL sandbox in <code>script.js</code>.</small>
-    </div>
+    <div class="container">Built by Ajay — AI Engineer • GitHub: <a href="https://github.com/AjayBandiwaddar">@AjayBandiwaddar</a></div>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="assets/script.js"></script>
 </body>
 </html>

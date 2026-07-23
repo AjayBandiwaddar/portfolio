@@ -1,28 +1,16 @@
-# Ajay Bandiwaddar — AI & Reinforcement Learning Portfolio
+AI-first Portfolio — Ajay Bandiwaddar
 
-This repository contains a single-page portfolio site with an interactive Q-learning sandbox to demonstrate Reinforcement Learning fundamentals.
+This repository contains a starting portfolio site that emphasizes production AI engineering: LLM products, inference platforms, feature stores, model observability and MLOps. It is intentionally opinionated — not a generic template — and includes a small interactive visualization and a local playground that you can hook up to real endpoints.
 
-Files:
-- `index.html` — the portfolio page
-- `styles.css` — site styling
-- `script.js` — client-side Q-learning demo (gridworld)
+What I pushed
+- index.html — main site
+- assets/style.css — styling tuned to an AI/product aesthetic
+- assets/script.js — background neural nodes + a small playground simulator
 
-How to run locally:
+Next steps I can do for you (tell me which you want):
+- Personalize content from your resume (I can extract the PDF you uploaded and create detailed case studies).
+- Add project pages / deep dives for 2–3 highlight projects with architecture diagrams and artifact links.
+- Wire the playground to a real model endpoint (OpenAI, local LLM server, or a hosted inference service).
+- Add CI to publish to GitHub Pages and configure a custom domain.
 
-1. Clone the repo:
-   ```bash
-   git clone https://github.com/AjayBandiwaddar/portfolio.git
-   cd portfolio
-   ```
-2. Open `index.html` in your browser. The demo is fully client-side.
-
-Customize:
-- Edit the about/projects sections in `index.html` with exact descriptions, links, and metrics from your resume.
-- Update contact details in the contact section.
-- Extend `script.js` to showcase additional RL algorithms (DQN / policy gradients) using WebGL or WASM-backed compute if you want heavier demos.
-
-If you'd like, I can:
-- Add a Projects page that pulls repository links from your GitHub and shows live badges.
-- Add a blog or publications section with automatic generation from a list of papers.
-- Integrate the site with GitHub Pages (I can create a workflow to auto-deploy on push).
-
+Tell me which project case studies to add and provide any links (private or public) to code, notebooks, or blog posts and I'll add dedicated pages and environment-specific deployment notes.
