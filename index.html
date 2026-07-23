@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Ajay Bandiwaddar — AI & RL Portfolio</title>
+  <meta name="description" content="Portfolio of Ajay Bandiwaddar — AI, Reinforcement Learning, Deep Learning, ML engineer." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="hero">
+    <div class="container">
+      <h1>Ajay Bandiwaddar</h1>
+      <p class="tag">AI Engineer · Reinforcement Learning · Deep Learning · Robotics</p>
+      <p class="lead">I build intelligent systems & train agents that learn — from simulation to production. Explore live RL demo and selected projects below.</p>
+      <p class="cta-row">
+        <a class="btn" href="#projects">Projects</a>
+        <a class="btn ghost" href="#rl-demo">RL Demo</a>
+      </p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="about">
+      <h2>About</h2>
+      <p>I'm Ajay — an engineer focused on machine learning and reinforcement learning. I enjoy turning ML research into robust systems: from model prototyping to deployment and visualization. This portfolio highlights my technical skills and contains an interactive Q-learning sandbox to demonstrate core RL principles.</p>
+    </section>
+
+    <section id="skills">
+      <h2>Technical Skills</h2>
+      <ul class="skills-grid">
+        <li>Reinforcement Learning (Q-learning, PPO, DQN)</li>
+        <li>Deep Learning (PyTorch, TensorFlow)</li>
+        <li>Probabilistic Methods & Optimization</li>
+        <li>Simulation & Robotics (OpenAI Gym, Mujoco)</li>
+        <li>ML Engineering (Docker, CI/CD, model serving)</li>
+        <li>Data Engineering & Visualization (pandas, d3, plotly)</li>
+      </ul>
+    </section>
+
+    <section id="projects">
+      <h2>Selected Projects</h2>
+      <div class="projects">
+        <article>
+          <h3>Deep RL for Continuous Control</h3>
+          <p>Designed and trained policy-gradient agents for continuous-control tasks. Focus on stable training, reward shaping, and sim-to-real transfer.</p>
+        </article>
+        <article>
+          <h3>Model Interpretability for Vision Systems</h3>
+          <p>Implemented saliency and attribution tools to explain deep CNN decisions and integrated visual explanations into a lightweight dashboard.</p>
+        </article>
+        <article>
+          <h3>RL Curriculum & Curriculum Learning</h3>
+          <p>Built curriculum pipelines to progressively train agents from easier to harder subtasks, improving sample-efficiency for long-horizon tasks.</p>
+        </article>
+      </div>
+      <p class="project-note">Want the real project descriptions from my resume embedded here? I can update these items with exact titles, links, and metrics from your resume when you share them.</p>
+    </section>
+
+    <section id="rl-demo">
+      <h2>Interactive RL Demo — Q-learning Gridworld</h2>
+      <p>This sandbox trains a tiny Q-learning agent on a gridworld. Tweak learning-rate, epsilon, episodes and watch the agent learn to reach the goal. It's all client-side — fast and editable.</p>
+
+      <div class="demo-controls">
+        <label>Episodes: <input id="episodes" type="range" min="1" max="2000" value="500" /></label>
+        <label>Alpha: <input id="alpha" type="range" min="0.01" max="1" step="0.01" value="0.5" /></label>
+        <label>Gamma: <input id="gamma" type="range" min="0" max="1" step="0.01" value="0.9" /></label>
+        <label>Epsilon: <input id="epsilon" type="range" min="0" max="1" step="0.01" value="0.2" /></label>
+        <div class="controls-row">
+          <button id="trainBtn" class="btn">Train</button>
+          <button id="stepBtn" class="btn ghost">Step</button>
+          <button id="resetBtn" class="btn ghost">Reset</button>
+        </div>
+      </div>
+
+      <canvas id="gridCanvas" width="480" height="480" aria-label="Q-learning gridworld visualization"></canvas>
+      <p class="demo-note">Tip: training many episodes will run faster if you increase the episodes slider and press Train. Q-values are visualized by arrows and cell heat.</p>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>Update the contact details in <code>README.md</code> or this site with your email, links to GitHub, LinkedIn, or papers.</p>
+      <ul>
+        <li>GitHub: <a href="https://github.com/AjayBandiwaddar">github.com/AjayBandiwaddar</a></li>
+        <li>Email: <em>replace-with-email@example.com</em></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <small>Built with a focus on AI & Reinforcement Learning. Clone, edit, and extend the RL sandbox in <code>script.js</code>.</small>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
