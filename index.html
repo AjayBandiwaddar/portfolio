@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Ajay Bandiwaddar — Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="hero">
+    <div class="container">
+      <h1>Ajay Bandiwaddar</h1>
+      <p class="tagline">AI & Reinforcement Learning Engineer — building intelligent agents & data-driven systems</p>
+      <p class="cta">
+        <a class="btn" href="#projects">Projects</a>
+        <a class="btn ghost" href="#rl-demo">RL Demo</a>
+      </p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="about">
+      <h2>About</h2>
+      <p>I design and implement machine learning systems with a focus on reinforcement learning, decision making, and production-ready ML tooling. I work with Python, PyTorch, TensorFlow, and modern MLOps practices to take models from research to production.</p>
+    </section>
+
+    <section id="skills">
+      <h2>Technical Skills</h2>
+      <ul class="skills">
+        <li><strong>AI & ML:</strong> Deep Learning, Representation Learning, Transformers</li>
+        <li><strong>Reinforcement Learning:</strong> Q-Learning, Policy Gradients, PPO, DQN, Sim2Real</li>
+        <li><strong>Languages & Tools:</strong> Python, PyTorch, TensorFlow, NumPy, JAX, Docker, GitHub Actions</li>
+        <li><strong>Data & Infra:</strong> Experiment tracking, model deployment, MLOps</li>
+      </ul>
+    </section>
+
+    <section id="projects">
+      <h2>Selected Projects</h2>
+      <div class="cards">
+        <article class="card">
+          <h3>RL Research and Productization</h3>
+          <p>Workflows for training RL agents, stable baselines customizations and pipelines to serve policies in production. Includes logging, checkpointing, hyperparameter tuning.</p>
+          <p class="muted">Tech: PyTorch, Stable Baselines3, Hydra, Weights & Biases</p>
+        </article>
+
+        <article class="card">
+          <h3>AI Agent Prototypes</h3>
+          <p>Prototyped multi-modal agents combining vision encoders and language models — experiments in grounding and control.</p>
+          <p class="muted">Tech: Transformers, PyTorch, ONNX</p>
+        </article>
+
+        <article class="card">
+          <h3>RL Gridworld Demo</h3>
+          <p>A compact Q-Learning demo (below) to visualize learning dynamics and policies. Interactively change learning rate, discount, exploration.</p>
+          <p class="muted">Tech: JavaScript (browser), visualization</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="rl-demo">
+      <h2>Interactive RL — Q-Learning Gridworld</h2>
+      <p>Experiment with a tiny Q-learning agent in a 5×5 grid. Train the agent to reach the goal while visualizing Q-values and policy.</p>
+      <div class="demo">
+        <canvas id="gridCanvas" width="500" height="500"></canvas>
+        <div class="controls">
+          <label>Alpha: <input id="alpha" type="range" min="0.01" max="1" step="0.01" value="0.5"></label>
+          <label>Gamma: <input id="gamma" type="range" min="0.1" max="0.99" step="0.01" value="0.95"></label>
+          <label>Epsilon: <input id="epsilon" type="range" min="0.0" max="1" step="0.01" value="0.2"></label>
+          <label>Episodes: <input id="episodes" type="number" min="1" max="5000" value="300"></label>
+          <div class="buttons">
+            <button id="trainBtn" class="btn">Train</button>
+            <button id="stepBtn" class="btn ghost">Run Episode</button>
+            <button id="resetBtn" class="btn">Reset</button>
+          </div>
+          <p class="muted small">Tip: lower epsilon to observe policy exploitation; higher epsilon shows exploration behavior.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact & Links</h2>
+      <p>GitHub: <a href="https://github.com/AjayBandiwaddar">@AjayBandiwaddar</a> — Resume: <a href="Ajay_Bandiwaddar_Resume.pdf">Download PDF</a></p>
+    </section>
+  </main>
+
+  <footer class="container">
+    <p>Built with a focus on AI & RL — interactive demo powered by Q-learning visualization.</p>
+  </footer>
+
+  <script src="rl-demo.js"></script>
+</body>
+</html>
